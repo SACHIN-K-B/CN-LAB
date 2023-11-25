@@ -1,12 +1,11 @@
-
 import java.net.*;
 import java.io.*;
+
 class UdpClient
 {
 	public static void main(String args[]) throws Exception
 	{
 		DatagramSocket datagramSocket = new DatagramSocket(4000);
-		DatagramSocket datagramSocket = new DatagramSocket(3000);
 		byte[] buffer;
 		DatagramPacket datagramPacket;
 		System.out.println("Received Messages: ");
