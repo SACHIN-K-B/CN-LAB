@@ -1,6 +1,7 @@
 import java.net.*;
 import java.io.*;
 import java.util.Scanner;
+
 class UdpServer
 {
 	public static void main(String args[]) throws Exception
@@ -16,13 +17,14 @@ class UdpServer
 			message = in.nextLine();
 			buffer = message.getBytes();
 			datagramPacket = new DatagramPacket(buffer, buffer.length, clientAddress, 4000);
-			datagramPacket = new DatagramPacket(buffer, buffer.length, clientAddress, 3000);
 			datagramSocket.send(datagramPacket);
 
 			if (message.equalsIgnoreCase("exit")) {
 				datagramSocket.close();
 				break;
 			}
+
 		}
 	}
+
 }
